@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# public files generate from bower
+public/js/angular/
+public/js/angular-ui-router/
+public/js/bootstrap/
+public/js/jquery/
+
+# log files
+*.log
+
+# WebStorm
+.idea/
+
+#Other
+.DS_Store

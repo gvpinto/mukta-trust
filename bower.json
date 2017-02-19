@@ -1,0 +1,14 @@
+{
+  "name": "mukta-trust",
+  "description": "Mukta Trust Application",
+  "version": "1.0.0",
+  "homepage": "www.muktatrust.com",
+  "license": "AshRiv",
+  "private": true,
+  "dependencies": {
+    "jquery": "~3.x.x",
+    "bootstrap": "~3.x.x",
+    "angular": "~1.6.x",
+    "angular-ui-router": "~0.4.2"
+  }
+}
