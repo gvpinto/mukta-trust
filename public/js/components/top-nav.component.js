@@ -1,7 +1,7 @@
 (function () {
     angular.module('mukta-trust')
         .component('topNav', {
-            templateUrl: '../../templates/top-nav.component.html',
+            templateUrl: 'js/components/templates/top-nav.component.html',
             bindings: {
                 activeMenu: '@'
             },
@@ -25,6 +25,17 @@
                     // TODO: Error handling
                     });
             }
+        }
+
+        $ctrl.highlightMenu = function(name) {
+            $ctrl.menuItems.forEach(function(element) {
+
+                if (element.name === name) {
+                    element.active = true;
+                } else {
+                    element.active = false;
+                }
+            })
         }
     }
 

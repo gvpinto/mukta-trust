@@ -1,7 +1,7 @@
 (function () {
     angular.module('mukta-trust')
         .component('slider', {
-            templateUrl: '../../templates/slider.component.html',
+            templateUrl: 'js/components/templates/slider.component.html',
             controller: SliderComponentController
         });
 

@@ -19,19 +19,24 @@
                 setTimeout(function () {
                     menuItems = [{
                         name: 'Home',
-                        url: ''
+                        url: 'home',
+                        active: true // default
                     }, {
                         name: 'About Us',
-                        url: 'about-us'
+                        url: 'about-us',
+                        active: false
                     }, {
                         name: 'Contact Us',
-                        url: 'contact-us'
+                        url: 'contact-us',
+                        active: false
                     }, {
                         name: 'Sign up',
-                        url: 'sign-up'
+                        url: 'sign-up',
+                        active: false
                     }, {
                         name: 'Sign in',
-                        url: 'sign-in'
+                        url: 'sign-in',
+                        active: false
                     }];
                     deferred.resolve(menuItems);
                 }, 1000);

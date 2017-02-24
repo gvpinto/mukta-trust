@@ -13,8 +13,14 @@
             .state('home', {
                 url: '/',
                 views: {
-                    "home-header": {
-                        templateUrl: '../templates/home-header.html'
+                    "header": {
+                        templateUrl: '../templates/header.html'
+                    },
+                    "body": {
+                        templateUrl: '../templates/home.html'
+                    },
+                    "footer": {
+                        templateUrl: '../templates/footer.html'
                     }
                 },
                 resolve: {
@@ -24,34 +30,58 @@
                 }
             })
             .state('about-us', {
-                url: '/',
+                url: '/about-us',
                 views: {
-                    "about-us-header": {
-                        templateUrl: '../templates/home-header.html'
+                    "header": {
+                        templateUrl: '../templates/header.html'
+                    },
+                    "body": {
+                        templateUrl: '../templates/about-us.html'
+                    },
+                    "footer": {
+                        templateUrl: '../templates/footer.html'
                     }
                 }
             })
             .state('contact-us', {
-                url: '/',
+                url: '/contact-us',
                 views: {
-                    "contact-us-header": {
-                        templateUrl: '../templates/home-header.html'
+                    "header": {
+                        templateUrl: '../templates/header.html'
+                    },
+                    "body": {
+                        templateUrl: '../templates/contact-us.html'
+                    },
+                    "footer": {
+                        templateUrl: '../templates/footer.html'
                     }
                 }
             })
             .state('sign-in', {
-                url: '/',
+                url: '/sign-in',
                 views: {
-                    "sign-in-header": {
-                        templateUrl: '../templates/home-header.html'
+                    "header": {
+                        templateUrl: '../templates/header.html'
+                    },
+                    "body": {
+                        templateUrl: '../templates/sign-in.html'
+                    },
+                    "footer": {
+                        templateUrl: '../templates/footer.html'
                     }
                 }
             })
             .state('sign-up', {
-                url: '/',
+                url: '/sign-up',
                 views: {
-                    "sign-up-header": {
-                        templateUrl: '../templates/home-header.html'
+                    "header": {
+                        templateUrl: '../templates/header.html'
+                    },
+                    "body": {
+                        templateUrl: '../templates/sign-up.html'
+                    },
+                    "footer": {
+                        templateUrl: '../templates/footer.html'
                     }
                 }
             });
