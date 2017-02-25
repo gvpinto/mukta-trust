@@ -7,11 +7,11 @@
 
     function RoutesConfig($stateProvider, $urlRouterProvider) {
         // Default Router
-        $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/home');
 
         $stateProvider
             .state('home', {
-                url: '/',
+                url: '/home',
                 views: {
                     "header": {
                         templateUrl: '../templates/header.html'
@@ -103,12 +103,6 @@
                     "footer": {
                         templateUrl: '../templates/footer.html'
                     }
-                },
-                resolve: {
-                    menuItems: ['NavigationService', function(NavigationService) {
-                        NavigationService.setActiveMenuIndex(4); // index for sign-up
-                        return NavigationService.getMenuItems();
-                    }]
                 }
             });
 
