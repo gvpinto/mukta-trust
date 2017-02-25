@@ -23,9 +23,11 @@
                         templateUrl: '../templates/footer.html'
                     }
                 },
+                controller: 'HomeCtrl as ctrl',
                 resolve: {
                     menuItems: ['NavigationService', function(NavigationService) {
-                       return NavigationService.getMenuItems();
+                        NavigationService.setActiveMenuIndex(0); // index for home
+                        return NavigationService.getMenuItems();
                     }]
                 }
             })
@@ -41,6 +43,12 @@
                     "footer": {
                         templateUrl: '../templates/footer.html'
                     }
+                },
+                resolve: {
+                    menuItems: ['NavigationService', function(NavigationService) {
+                        NavigationService.setActiveMenuIndex(1); // index for about-us
+                        return NavigationService.getMenuItems();
+                    }]
                 }
             })
             .state('contact-us', {
@@ -55,6 +63,12 @@
                     "footer": {
                         templateUrl: '../templates/footer.html'
                     }
+                },
+                resolve: {
+                    menuItems: ['NavigationService', function(NavigationService) {
+                        NavigationService.setActiveMenuIndex(2); // index for contact-us
+                        return NavigationService.getMenuItems();
+                    }]
                 }
             })
             .state('sign-in', {
@@ -69,6 +83,12 @@
                     "footer": {
                         templateUrl: '../templates/footer.html'
                     }
+                },
+                resolve: {
+                    menuItems: ['NavigationService', function(NavigationService) {
+                        NavigationService.setActiveMenuIndex(3); // index for sign-in
+                        return NavigationService.getMenuItems();
+                    }]
                 }
             })
             .state('sign-up', {
@@ -83,9 +103,20 @@
                     "footer": {
                         templateUrl: '../templates/footer.html'
                     }
+                },
+                resolve: {
+                    menuItems: ['NavigationService', function(NavigationService) {
+                        NavigationService.setActiveMenuIndex(4); // index for sign-up
+                        return NavigationService.getMenuItems();
+                    }]
                 }
             });
 
+
+        // HomeCtrl.$inject = [$,]
+        function HomeCtrl() {
+
+        }
 
 
     }

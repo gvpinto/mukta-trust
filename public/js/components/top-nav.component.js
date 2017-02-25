@@ -12,30 +12,25 @@
 
     function TopNavComponentController($element, NavigationService) {
         var $ctrl = this;
+        $ctrl.isHome = true;
+        $ctrl.activeMenuIndex = 0;
 
         $ctrl.$onInit = function() {
-            console.log('$onInit');
             if (!$ctrl.menuItems) {
                 NavigationService.getMenuItems()
                     .then(function (items) {
-                        console.log('items: ', items);
                         $ctrl.menuItems = items
                     })
                     .catch(function (error) {
                     // TODO: Error handling
                     });
             }
+            $ctrl.activeMenuIndex = NavigationService.getActiveMenuIndex();
         }
 
-        $ctrl.highlightMenu = function(name) {
-            $ctrl.menuItems.forEach(function(element) {
-
-                if (element.name === name) {
-                    element.active = true;
-                } else {
-                    element.active = false;
-                }
-            })
+        $ctrl.highlightMenu = function(index) {
+            $ctrl.activeMenuIndex = index;
+            NavigationService.setActiveMenuIndex(index);
         }
     }
 

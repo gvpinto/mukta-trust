@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div ng-class="{'navbar': true, 'navbar-inverse': true, 'navbar-fixed-top': ($ctrl.activeMenuIndex === 0), 'navbar-static-top': !($ctrl.activeMenuIndex === 0)}" role="navigation">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
 
             <ul class="nav navbar-nav navbar-right">
-                <li ng-repeat="menuItem in $ctrl.menuItems" ng-class="{active: menuItem.active}"><a ui-sref="{{ menuItem.url }}"  ng-click="$ctrl.highlightMenu(menuItem.name)">{{ menuItem.name | uppercase }}</a></li>
+                <li ng-repeat="menuItem in $ctrl.menuItems" ng-class="{active: ($index === $ctrl.activeMenuIndex)}"><a ui-sref="{{ menuItem.url }}"  ng-click="$ctrl.highlightMenu($index)">{{ menuItem.name | uppercase }}</a></li>
             </ul>
         </div>
     </div>

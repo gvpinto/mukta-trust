@@ -8,8 +8,9 @@
         var service = this;
 
         var menuItems;
+        var activeMenuIndex = 0;
 
-        service.getMenuItems = function() {
+        service.getMenuItems = function () {
 
             var deferred = $q.defer();
 
@@ -46,7 +47,16 @@
             }
 
             return deferred.promise;
+        };
+
+        service.setActiveMenuIndex = function (index) {
+            activeMenuIndex = index;
+        };
+
+        service.getActiveMenuIndex = function() {
+            return activeMenuIndex;
         }
+
 
     }
 
